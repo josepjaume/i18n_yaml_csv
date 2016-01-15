@@ -35,6 +35,8 @@ describe I18nYamlCsv::ToCSV do
 
   describe "generate" do
     it "converts to csv" do
+      puts subject.generate
+
       csv = CSV.parse(subject.generate)
       expect(csv.first).to eq(["code", "ca", "es", "en"])
       expect(csv).to include(
